@@ -1,0 +1,14 @@
+gemfileparser==0.8.0
+toml==0.10.2
+lxml>=4.6.3
+memoization==0.3.2
+requests==2.24.0
+pypi_simple==0.8.0
+ratelimit==2.2.1
+urllib3==1.25.11
+pyarn==0.1.0
+pyyaml==5.4.1
+python-gitlab==2.6.0
+github3.py==2.0.0
+flask==1.1.2
+gunicorn

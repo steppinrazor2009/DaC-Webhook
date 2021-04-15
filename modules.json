@@ -1,0 +1,131 @@
+{
+	"modules": [
+        {
+            "name" : "npm",
+            "file_name" : "npm.py",
+            "manifest_file" : [
+                "package.json"
+            ],
+            "lock_file": [
+                "npm-shrinkwrap.json",
+                "package-lock.json"
+            ],
+            "config_file": ".npmrc",
+            "config_parse_func": "check_npm_config",
+            "parse_func" : "get_npm_dependencies",
+            "repo_check_func" : "check_npm_public_repo"
+        },
+        {
+            "name" : "maven",
+            "file_name" : "maven.py",
+            "manifest_file" : [
+                "pom.xml"
+            ],
+            "lock_file": [],
+            "parse_func" : "get_maven_dependencies",
+            "repo_check_func" : "check_maven_public_repo"
+        },
+        {
+            "name" : "bower",
+            "file_name" : "bower.py",
+            "manifest_file" : [
+                "bower.json"
+            ],
+            "lock_file": [],
+            "parse_func" : "get_bower_dependencies",
+            "repo_check_func" : "check_bower_public_repo"
+        },
+        {
+            "name" : "gradle",
+            "file_name" : "gradle.py",
+            "manifest_file" : [
+                "gradle.build",
+                "build.gradle"
+            ],
+            "lock_file": [
+                "gradle.lockfile"
+            ],
+            "parse_func" : "get_gradle_dependencies",
+            "repo_check_func" : "check_gradle_public_repo"
+        },
+        {
+            "name" : "pips",
+            "file_name" : "pips.py",
+            "manifest_file" : [
+                "requirements.txt",
+                "pipfile"
+            ],
+            "lock_file": [
+                "pipfile.lock"
+            ],
+            "parse_func" : "get_pip_dependencies",
+            "repo_check_func" : "check_pip_public_repo"
+        },
+        {
+            "name" : "gems",
+            "file_name" : "gems.py",
+            "manifest_file" : [
+                "gemfile"
+            ],
+            "lock_file": [
+                "gemfile.lock"
+            ],
+            "parse_func" : "get_gems_dependencies",
+            "repo_check_func" : "check_gems_public_repo"
+        },
+        {
+            "name" : "gulp",
+            "file_name" : "gulp.py",
+            "manifest_file" : [
+                "gulpfile.js"
+            ],
+            "lock_file": [],
+            "parse_func" : "get_gulp_dependencies",
+            "repo_check_func" : "check_gulp_public_repo"
+        },
+        {
+            "name" : "yarn",
+            "file_name" : "yarn.py",
+            "manifest_file" : [
+                "yarn.lock"                
+            ],
+            "lock_file": [],
+            "parse_func" : "get_yarn_dependencies",
+            "repo_check_func" : "check_yarn_public_repo"
+        },
+        {
+            "name" : "cocoapods",
+            "file_name" : "cocoapods.py",
+            "manifest_file" : [
+                "podfile"
+            ],
+            "lock_file": [
+                "podfile.lock"
+            ],
+            "parse_func" : "get_cocoapods_dependencies",
+            "repo_check_func" : "check_cocoapods_public_repo"
+        },
+        {
+            "name" : "nuget",
+            "file_name" : "nuget.py",
+            "manifest_file" : [
+                "nuget.config"
+            ],
+            "lock_file": [],
+            "parse_func" : "parse_nuget_config",
+            "repo_check_func" : "nuget_return"
+        },
+        {
+            "name" : "composer",
+            "file_name" : "composer.py",
+            "manifest_file" : [
+                "composer.json"
+            ],
+            "lock_file" : [
+                "composer.lock"
+            ],
+            "parse_func" : "get_composer_dependencies",
+            "repo_check_func" : "check_composer_public_repo"
+        }                     
+    ]
+}
